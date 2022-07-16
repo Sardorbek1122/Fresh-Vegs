@@ -3,11 +3,93 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Fresh-vegs</title>
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    <header class="header">
+      <div class="header__top">
+        <div class="header__top-wrapper">
+          <div class="header__top-contact top-contact">
+            <div class="top-contact__logo">
+              <a href="#" class="top-contact__logo-img">LOGO</a>
+              <p class="top-contact__company-name">Company name</p>
+            </div>
+
+            <div class="top-contact__contacts">
+              <div class="top-contact__tel-number">
+                <a href="#" class="top-contact__tel">+7 812 291-19-15</a>
+                <a href="#" class="top-contact__tel">+7 812 291-19-15</a>
+              </div>
+              <a href="#" class="top-contact__form">Обратный звонок</a>
+            </div>
+          </div>
+
+          <nav class="header__nav nav">
+            <ul class="nav__items">
+              <li class="nav__item">
+                <a href="#product" class="nav__link">Продукция</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">о нас</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">Доставка</a>
+              </li>
+
+              <li class="nav__item">
+                <a href="#" class="nav__link">контакт</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__content">
+        <h2 class="header__content-text">
+          Свежие овощи и фрукты в вакуумной упаковке
+          оптом в Санкт-Петербурге
+        </h2>
+      </div>
+    </header>
+
+    <main class="main-page">
+      <section id="product" class="main-page__product product">
+        <div class="product__wrapper">
+          <h2 class="product__title">наши продукты</h2>
+          <p class="product__about-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ullam earum quaerat doloribus similique fugiat voluptatibus at aperiam repellendus laudantium numquam, laboriosam ea voluptates accusamus, dolores fuga deleniti. Corrupti, ratione.
+          </p>
+          <div class="product__row-1">
+            <article class="product__card">
+              <div class="product__img-carrot"></div>
+              <p class="product__text">Свежие овощи в вакуумной упаковке</p>
+            </article>
+
+            <article class="product__card">
+              <div class="product__img-potato"></div>
+              <p class="product__text">Свежие овощи в вакуумной упаковке</p>
+            </article>
+          </div>
+
+          <div class="product__row-1">
+            <article class="product__card">
+              <p class="product__text">Свежие овощи в вакуумной упаковке</p>
+              <div class="product__img-onion"></div>
+            </article>
+
+            <article class="product__card">
+              <p class="product__text">Свежие овощи в вакуумной упаковке</p>
+              <div class="product__img-beetroot"></div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
