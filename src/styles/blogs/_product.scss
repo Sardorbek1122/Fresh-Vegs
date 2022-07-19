@@ -1,0 +1,108 @@
+.product {
+  border-bottom: 5px solid $c-bcg-green;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: $desktopMaxWidth;
+    margin: auto;
+
+  }
+
+  &__title {
+    @include fontParams (42px, 100%, 700 );
+    color: $c-light-green;
+    text-transform: capitalize;
+    margin: 35px auto;
+  }
+
+  &__about-text {
+    @include fontParams (18px, 100%, 400 );
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 25px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(18, 33, 22, 0.2),
+      0 6px 20px 0 rgba(4, 85, 8, 0.19);
+    border-radius: 15px;
+    background-color: #5ddd13;
+  }
+
+  &__card-green {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(18, 33, 22, 0.2),
+      0 6px 20px 0 rgba(4, 85, 8, 0.19);
+    border-radius: 15px;
+    background-color: #3bb14d;
+  }
+
+  &__img-carrot {
+    margin: auto;
+    background-image: url("/images/carrot.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 320px;
+    height: 250px;
+  }
+
+  &__img-potato {
+    margin: auto;
+    background-image: url("/images/potato.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 320px;
+    height: 250px;
+  }
+
+  &__img-onion {
+    margin: auto;
+    background-image: url("/images/onion.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 320px;
+    height: 250px;
+  }
+
+  &__img-beetroot {
+    margin: auto;
+    background-image: url("/images/beetroot.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 320px;
+    height: 250px;
+  }
+
+  &__text {
+    @include fontParams (18px, 100%, 400 );
+    text-align: center;
+  }
+}

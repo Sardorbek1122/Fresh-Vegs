@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  background: fixed;
+  background-image: url("/images/food.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  border-bottom: 3px solid $c-light-green;
+
+  &__top {
+    width: 100%;
+    height: 100px;
+    background-color: $c-bcg-all;
+    opacity: 0.8;
+    border-bottom: 3px solid $c-light-green;
+  }
+
+  &__top-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    max-width: $desktopMaxWidth;
+    margin: auto;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    max-width: $desktopMaxWidth;
+    margin: auto;
+  }
+
+  &__content-text {
+    @include fontParams (48px, 100%, 700);
+    color: $c-white;
+    margin: auto;
+    width: 60%;
+  }
+}

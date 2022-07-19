@@ -1,0 +1,43 @@
+.delivery {
+  background-color: rgba(255, 255, 255, 0.94);
+
+  &__title {
+    margin: 60px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 1400px;
+  }
+
+  &__context-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__context {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 400px;
+    width: 600px;
+  }
+
+  &__photo {
+    height: 400px;
+    width: 700px;
+    background-image: url("/images/truck-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid rgb(60, 102, 60);
+    border-radius: 15px;
+  }
+}

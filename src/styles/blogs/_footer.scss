@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  background-color: rgb(224, 229, 212);
+
+  &__link {
+    padding: 5px;
+    text-align: center;
+    margin: 0 15px;
+    font-size: 30px;
+    color: green;
+  }
+
+  &__link:hover {
+    color: black;
+  }
+}
