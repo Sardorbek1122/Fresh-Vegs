@@ -1,5 +1,9 @@
 .product {
   border-bottom: 5px solid $c-bcg-green;
+  background-image: url("/images/our-product-bcg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   &__wrapper {
     display: flex;
@@ -12,16 +16,17 @@
   }
 
   &__title {
-    @include fontParams (42px, 100%, 700 );
-    color: $c-light-green;
+    @include fontParams (64px, 100%, 900 );
+    color: $c-dark-green;
     text-transform: capitalize;
-    margin: 35px auto;
+    margin: $title-margin auto;
   }
 
   &__about-text {
-    @include fontParams (18px, 100%, 400 );
+    @include fontParams (32px, 100%, 500);
+    font-family: "Roboto", sans-serif;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   &__row {
@@ -102,7 +107,7 @@
   }
 
   &__text {
-    @include fontParams (18px, 100%, 400 );
+    @include fontParams (24px, 100%, 400 );
     text-align: center;
   }
 }

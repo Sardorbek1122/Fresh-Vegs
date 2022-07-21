@@ -11,8 +11,10 @@
   border-bottom: 5px solid rgb(46, 141, 29);
 
   &__title {
-    font-size: 48px;
-    margin: 125px 0 55px;
+    @include fontParams (64px, 100%, 900 );
+    color: $c-dark-green;
+    text-transform: capitalize;
+    margin: $title-margin auto;
   }
 
   &__wrapper {

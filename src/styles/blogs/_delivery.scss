@@ -2,7 +2,10 @@
   background-color: rgba(255, 255, 255, 0.94);
 
   &__title {
-    margin: 60px 0;
+    @include fontParams (64px, 100%, 900 );
+    color: $c-dark-green;
+    text-transform: capitalize;
+    margin: $title-margin auto;
   }
 
   &__wrapper {

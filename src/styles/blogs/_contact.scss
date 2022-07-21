@@ -8,6 +8,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  &__title {
+    @include fontParams (64px, 100%, 900 );
+    color: $c-dark-green;
+    text-transform: capitalize;
+    margin: 0 auto 24px;
+    grid-column: 1/-1;
+  }
+
   &__wrapper {
     margin: auto;
     width: 1400px;
@@ -22,12 +30,6 @@
     border-radius: 15px;
     background: rgba(188, 159, 128, 0.2);
     backdrop-filter: blur(3px);
-  }
-
-  &__header {
-    margin: 0 auto 24px;
-    grid-column: 1/-1;
-    @include fontParams (48px, 100%, 700);
   }
 
   &__form {
