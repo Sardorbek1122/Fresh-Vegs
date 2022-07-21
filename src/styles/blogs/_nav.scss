@@ -1,0 +1,31 @@
+.nav {
+  width: 100%;
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  &__item {
+    margin: 0 22px;
+    align-self: center;
+  }
+
+  &__link {
+    @include fontParams (18px, 100%, 500);
+    text-transform: capitalize;
+    color: $c-black;
+    padding: 2px 6px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition-duration: $transition-duration;
+  }
+
+  &__link:hover {
+    border: 2px solid $c-light-green;
+    background-color: $c-light-green;
+    color: $c-white;
+  }
+}
