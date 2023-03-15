@@ -12,7 +12,7 @@
     flex-direction: column;
     max-width: $desktopMaxWidth;
     margin: auto;
-
+    padding: 0 44px;
   }
 
   &__title {
@@ -107,7 +107,124 @@
   }
 
   &__text {
-    @include fontParams (24px, 100%, 400 );
+    @include fontParams (24px, 100%, 500 );
     text-align: center;
   }
+
+  @media (max-width: $desktop) {
+
+    &__title {
+      @include fontParams (32px, 100%, 800 );
+    }
+
+    &__wrapper {
+      padding: 0 $desktop-padding;
+    }
+
+    &__about-text {
+      @include fontParams (24px, 100%, 500);
+    }
+
+    &__card-green {
+      width: 320px;
+      height: 270px;
+    }
+
+    &__card {
+      width: 320px;
+      height: 270px;
+    }
+
+    &__text {
+      @include fontParams (22px, 100%, 500 );
+      text-align: center;
+    }
+
+    &__img-carrot {
+      width: 200px;
+      height: 250px;
+    }
+
+    &__img-potato {
+      width: 200px;
+      height: 250px;
+    }
+
+    &__img-onion {
+      width: 200px;
+      height: 250px;
+    }
+
+    &__img-beetroot {
+      width: 200px;
+      height: 250px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+
+    &__title {
+      @include fontParams (32px, 100%, 900 );
+    }
+
+    & {
+      background-position: right;
+      background-attachment: fixed;
+    }
+
+    &__row {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__card {
+      width: 400px;
+      height: 400px;
+    }
+
+    &__card-green {
+      width: 400px;
+      height: 400px;
+      margin: 30px 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+
+    &__title {
+      @include fontParams (27px, 100%, 900 );
+    }
+
+    &__card {
+      width: 250px;
+      height: 250px;
+    }
+
+    &__card-green {
+      width: 250px;
+      height: 250px;
+    }
+
+    &__img-carrot {
+      width: 240px;
+      height: 250px;
+    }
+
+    &__img-potato {
+      width: 240px;
+      height: 250px;
+    }
+
+    &__img-onion {
+      width: 240px;
+      height: 250px;
+    }
+
+    &__img-beetroot {
+      width: 240px;
+      height: 250px;
+    }
+  }
+
 }

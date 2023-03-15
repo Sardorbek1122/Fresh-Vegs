@@ -22,34 +22,44 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 1400px;
+    padding: 0 44px;
+    max-width: $desktopMaxWidth;
+    margin: auto;
   }
 
   &__content-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 24px;
     justify-content: space-around;
     align-items: center;
-    width: 1400px;
   }
 
   &__picture-tech {
-    height: 500px;
-    width: 600px;
+    grid-column: 1/7;
     background-image: url("/images/woman.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
     border-radius: 15px;
     outline: 5px solid rgb(33, 86, 8);
+    height: 500px;
+    width: 500px;
   }
 
   &__content {
+    grid-column: 7/-1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    width: 500px;
-    margin-left: 50px;
+  }
+
+  &__content-text {
+    @include fontParams (28px, 30px, 900 );
+    color: $c-black;
+    text-align: center;
+    margin-bottom: 25px;
   }
 
   &__btn {
@@ -57,7 +67,7 @@
   }
 
   &__quality {
-    width: 1400px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
@@ -105,5 +115,116 @@
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
+  }
+
+  @media (max-width: $desktop) {
+    &__wrapper {
+      padding: 0 $desktop-padding;
+    }
+
+    &__title {
+      @include fontParams (37px, 100%, 800 );
+    }
+
+    &__picture-tech {
+      height: 400px;
+      width: 350px;
+    }
+
+    &__content-wrapper {
+      width: 840px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__content {
+      width: 390px;
+      margin-left: 0;
+    }
+
+    &__content-text {
+      @include fontParams (26px, 25px, 500 );
+    }
+
+    &__quality {
+      width: 840px;
+    }
+
+    &__icon-text {
+      width: 250px;
+      height: 260px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &__title {
+      @include fontParams (32px, 100%, 800 );
+    }
+
+    &__wrapper {
+      padding: 22px;
+    }
+
+    &__content-wrapper {
+      width: 500px;
+    }
+
+    &__picture-tech {
+      grid-column: 1/-1;
+      width: 500px;
+      margin: auto;
+    }
+
+    &__content {
+      grid-column: 1/-1;
+      margin: 25px auto;
+      width: 500px;
+    }
+
+    &__quality {
+      flex-direction: column;
+      width: 500px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__icon-text {
+      width: 500px;
+      height: 350px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+
+    &__title {
+      @include fontParams (27px, 100%, 800 );
+    }
+
+    &__wrapper {
+      padding: 11px;
+      width: 300px;
+    }
+
+    &__content-wrapper {
+      width: 270px;
+    }
+
+    &__picture-tech {
+      width: 250px;
+      height: 300px;
+    }
+
+    &__content {
+      width: 300px;
+    }
+
+    &__quality {
+      width: 270px;
+    }
+
+    &__icon-text {
+      width: 270px;
+      height: 250px;
+    }
   }
 }

@@ -46,4 +46,23 @@
     color: $c-dark-green;
     border-bottom: 2px solid $c-dark-green;
   }
+
+  @media (max-width: $mobile) {
+    &__logo {
+      @include fontParams (17px, 100%, 700);
+    }
+
+    &__tel-number {
+      margin-right: 10px;
+    }
+
+    &__tel {
+      @include fontParams (12px, 100%, 700);
+    }
+
+    &__tel:nth-child(1) {
+      margin-bottom: 3px;
+    }
+
+  }
 }

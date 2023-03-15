@@ -28,4 +28,10 @@
     background-color: $c-light-green;
     color: $c-white;
   }
+
+  @media (max-width: $mobile) {
+    & {
+      display: none;
+    }
+  }
 }
