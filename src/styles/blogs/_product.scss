@@ -1,0 +1,230 @@
+.product {
+  border-bottom: 5px solid $c-bcg-green;
+  background-image: url("/images/our-product-bcg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: $desktopMaxWidth;
+    margin: auto;
+    padding: 0 44px;
+  }
+
+  &__title {
+    @include fontParams (64px, 100%, 900 );
+    color: $c-dark-green;
+    text-transform: capitalize;
+    margin: $title-margin auto;
+  }
+
+  &__about-text {
+    @include fontParams (32px, 100%, 500);
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 25px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(18, 33, 22, 0.2),
+      0 6px 20px 0 rgba(4, 85, 8, 0.19);
+    border-radius: 15px;
+    background-color: #5ddd13;
+  }
+
+  &__card-green {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(18, 33, 22, 0.2),
+      0 6px 20px 0 rgba(4, 85, 8, 0.19);
+    border-radius: 15px;
+    background-color: #3bb14d;
+  }
+
+  &__img-carrot {
+    margin: auto;
+    background-image: url("/images/carrot.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 320px;
+    height: 250px;
+  }
+
+  &__img-potato {
+    margin: auto;
+    background-image: url("/images/potato.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 320px;
+    height: 250px;
+  }
+
+  &__img-onion {
+    margin: auto;
+    background-image: url("/images/onion.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 320px;
+    height: 250px;
+  }
+
+  &__img-beetroot {
+    margin: auto;
+    background-image: url("/images/beetroot.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 320px;
+    height: 250px;
+  }
+
+  &__text {
+    @include fontParams (24px, 100%, 500 );
+    text-align: center;
+  }
+
+  @media (max-width: $desktop) {
+
+    &__title {
+      @include fontParams (32px, 100%, 800 );
+    }
+
+    &__wrapper {
+      padding: 0 $desktop-padding;
+    }
+
+    &__about-text {
+      @include fontParams (24px, 100%, 500);
+    }
+
+    &__card-green {
+      width: 320px;
+      height: 270px;
+    }
+
+    &__card {
+      width: 320px;
+      height: 270px;
+    }
+
+    &__text {
+      @include fontParams (22px, 100%, 500 );
+      text-align: center;
+    }
+
+    &__img-carrot {
+      width: 200px;
+      height: 250px;
+    }
+
+    &__img-potato {
+      width: 200px;
+      height: 250px;
+    }
+
+    &__img-onion {
+      width: 200px;
+      height: 250px;
+    }
+
+    &__img-beetroot {
+      width: 200px;
+      height: 250px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+
+    &__title {
+      @include fontParams (32px, 100%, 900 );
+    }
+
+    & {
+      background-position: right;
+      background-attachment: fixed;
+    }
+
+    &__row {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__card {
+      width: 400px;
+      height: 400px;
+    }
+
+    &__card-green {
+      width: 400px;
+      height: 400px;
+      margin: 30px 0;
+    }
+  }
+
+  @media (max-width: $mobile) {
+
+    &__title {
+      @include fontParams (27px, 100%, 900 );
+    }
+
+    &__card {
+      width: 250px;
+      height: 250px;
+    }
+
+    &__card-green {
+      width: 250px;
+      height: 250px;
+    }
+
+    &__img-carrot {
+      width: 240px;
+      height: 250px;
+    }
+
+    &__img-potato {
+      width: 240px;
+      height: 250px;
+    }
+
+    &__img-onion {
+      width: 240px;
+      height: 250px;
+    }
+
+    &__img-beetroot {
+      width: 240px;
+      height: 250px;
+    }
+  }
+
+}

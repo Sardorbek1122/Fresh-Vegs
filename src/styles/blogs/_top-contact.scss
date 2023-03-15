@@ -1,0 +1,68 @@
+.top-contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__company-name {
+    @include fontParams (18px, 100%, 400);
+    margin-left: 5px;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__tel-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include fontParams (18px, 100%, 400);
+    margin-right: 40px;
+  }
+
+  &__tel {
+    @include fontParams (16px, 100%, 700);
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition-duration: $transition-duration;
+    color: $c-black;
+  }
+
+  &__tel:nth-child(1) {
+    margin-bottom: 8px;
+  }
+
+  &__tel:hover {
+    color: $c-dark-green;
+    border-bottom: 2px solid $c-dark-green;
+  }
+
+  @media (max-width: $mobile) {
+    &__logo {
+      @include fontParams (17px, 100%, 700);
+    }
+
+    &__tel-number {
+      margin-right: 10px;
+    }
+
+    &__tel {
+      @include fontParams (12px, 100%, 700);
+    }
+
+    &__tel:nth-child(1) {
+      margin-bottom: 3px;
+    }
+
+  }
+}

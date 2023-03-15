@@ -1,0 +1,95 @@
+.delivery {
+  background-color: rgba(255, 255, 255, 0.94);
+
+  &__title {
+    @include fontParams (64px, 100%, 900 );
+    color: $c-dark-green;
+    text-transform: capitalize;
+    margin: $title-margin auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 0 44px;
+    width: 1400px;
+  }
+
+  &__context-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__context {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 400px;
+    width: 600px;
+  }
+
+  &__context-text {
+    @include fontParams (24px, 100%, 500 );
+    color: $c-black;
+    text-transform: capitalize;
+    margin: $title-margin auto;
+  }
+
+  &__photo {
+    height: 400px;
+    width: 700px;
+    background-image: url("/images/truck-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid rgb(60, 102, 60);
+    border-radius: 15px;
+  }
+
+  @media (max-width: $desktop) {
+    &__wrapper {
+      width: 940px;
+      padding: 0 22px;
+    }
+
+    &__context-text {
+      @include fontParams (20px, 100%, 500 );
+    }
+
+    &__photo {
+      height: 300px;
+      width: 500px;
+      margin-left: 30px;
+    }
+
+  }
+
+  @media (max-width: $tablet) {
+    &__wrapper {
+      width: 550px;
+      padding: 0 22px;
+    }
+
+    &__context-wrapper {
+      @include fontParams (20px, 100%, 500 );
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__context {
+      width: 490px;
+    }
+
+    &__photo {
+      height: 300px;
+      width: 500px;
+      margin: 0;
+    }
+  }
+}

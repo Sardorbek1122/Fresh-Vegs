@@ -1,0 +1,230 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("/images/green-bcg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 25px;
+  border-bottom: 5px solid rgb(46, 141, 29);
+
+  &__title {
+    @include fontParams (64px, 100%, 900 );
+    color: $c-dark-green;
+    text-transform: capitalize;
+    margin: $title-margin auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 44px;
+    max-width: $desktopMaxWidth;
+    margin: auto;
+  }
+
+  &__content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 24px;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__picture-tech {
+    grid-column: 1/7;
+    background-image: url("/images/woman.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    outline: 5px solid rgb(33, 86, 8);
+    height: 500px;
+    width: 500px;
+  }
+
+  &__content {
+    grid-column: 7/-1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__content-text {
+    @include fontParams (28px, 30px, 900 );
+    color: $c-black;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    margin: 25px 0;
+  }
+
+  &__quality {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 250px;
+    background-color: rgb(27, 223, 106);
+    margin-top: 50px;
+    border: 3px solid $c-bcg-green;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  &__icon-content {
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  &__icon-tech {
+    width: 50px;
+    height: 55px;
+    background-image: url("/images/icon-tech.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+  }
+
+  &__icon-quality {
+    width: 50px;
+    height: 55px;
+    background-image: url("/images/icon-quality.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+  }
+
+  &__icon-delivery {
+    width: 50px;
+    height: 55px;
+    background-image: url("/images/icon-delivery.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+  }
+
+  @media (max-width: $desktop) {
+    &__wrapper {
+      padding: 0 $desktop-padding;
+    }
+
+    &__title {
+      @include fontParams (37px, 100%, 800 );
+    }
+
+    &__picture-tech {
+      height: 400px;
+      width: 350px;
+    }
+
+    &__content-wrapper {
+      width: 840px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__content {
+      width: 390px;
+      margin-left: 0;
+    }
+
+    &__content-text {
+      @include fontParams (26px, 25px, 500 );
+    }
+
+    &__quality {
+      width: 840px;
+    }
+
+    &__icon-text {
+      width: 250px;
+      height: 260px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &__title {
+      @include fontParams (32px, 100%, 800 );
+    }
+
+    &__wrapper {
+      padding: 22px;
+    }
+
+    &__content-wrapper {
+      width: 500px;
+    }
+
+    &__picture-tech {
+      grid-column: 1/-1;
+      width: 500px;
+      margin: auto;
+    }
+
+    &__content {
+      grid-column: 1/-1;
+      margin: 25px auto;
+      width: 500px;
+    }
+
+    &__quality {
+      flex-direction: column;
+      width: 500px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__icon-text {
+      width: 500px;
+      height: 350px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+
+    &__title {
+      @include fontParams (27px, 100%, 800 );
+    }
+
+    &__wrapper {
+      padding: 11px;
+      width: 300px;
+    }
+
+    &__content-wrapper {
+      width: 270px;
+    }
+
+    &__picture-tech {
+      width: 250px;
+      height: 300px;
+    }
+
+    &__content {
+      width: 300px;
+    }
+
+    &__quality {
+      width: 270px;
+    }
+
+    &__icon-text {
+      width: 270px;
+      height: 250px;
+    }
+  }
+}
